@@ -1,1 +1,1 @@
-pyuic5 -x random.ui -o randomcode.py
+pyuic5 -x random.ui -o randomui.py
