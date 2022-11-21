@@ -183,7 +183,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Random</string>
+     <string>Generate</string>
     </property>
    </widget>
    <widget class="QPushButton" name="savebt1">

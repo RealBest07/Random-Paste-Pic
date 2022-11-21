@@ -173,7 +173,7 @@ class Ui_MainWindow(object):
         self.changebt2.setText(_translate("MainWindow", "Change"))
         self.changebt3.setText(_translate("MainWindow", "Change"))
         self.label_4.setText(_translate("MainWindow", "Result"))
-        self.randombt1.setText(_translate("MainWindow", "Random"))
+        self.randombt1.setText(_translate("MainWindow", "Generate"))
         self.savebt1.setText(_translate("MainWindow", "Save"))
         self.browsebt4.setText(_translate("MainWindow", "Browse..."))
 
