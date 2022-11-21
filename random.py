@@ -11,7 +11,8 @@ class ranptaste(Ui_MainWindow):
 
     def gcn(self):
         pass
-    
+#xxxxxxxxxxxx
+
 if __name__ == "__main__":
     mycode = ranptaste()
     MainWindow.show()
