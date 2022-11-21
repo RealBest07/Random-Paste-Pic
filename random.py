@@ -1,15 +1,18 @@
-import glob
-import random
-from PIL import Image
+from PyQt5 import QtCore, QtGui, QtWidgets
+from randomui import Ui_MainWindow
+import sys
+app = QtWidgets.QApplication(sys.argv)
+MainWindow = QtWidgets.QMainWindow()
 
+class ranptaste(Ui_MainWindow):
+    def __init__(self) -> None:
+        super().setupUi(MainWindow)
+        self.gcn()
 
-img_bg = Image.open('circle.jpg')
-width, height = img_bg.size
-images = glob.glob('*.png')
-for img in images:
-    img = Image.open(img)
-    x = random.randint(40, width-40)
-    y = random.randint(40, height-40)
-    img_bg.paste(img, (x, y, x+10, y+10))
-img_bg.save('result.png', 'PNG')
-# https://stackoverflow.com/questions/55576760/how-can-i-randomly-add-20-images10x10-in-an-empty-background-image-200x200-i
+    def gcn(self):
+        pass
+    
+if __name__ == "__main__":
+    mycode = ranptaste()
+    MainWindow.show()
+    sys.exit(app.exec_())
