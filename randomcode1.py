@@ -18,6 +18,10 @@ class ranptaste(Ui_MainWindow):
     def __init__(self) -> None:
         super().setupUi(MainWindow)
         self.gcn()
+        self.minim1x = 0
+        self.minim1y = 0
+        self.minim2x = 0
+        self.minim2y = 0
 
     def gcn(self):
         self.browsebt1.clicked.connect(self.browsclickex1)
@@ -27,6 +31,7 @@ class ranptaste(Ui_MainWindow):
         self.changebt1.clicked.connect(self.change1)
         self.changebt2.clicked.connect(self.change2)
         self.changebt3.clicked.connect(self.change3)
+        
 
 
     def change1(self):
@@ -36,6 +41,10 @@ class ranptaste(Ui_MainWindow):
             self.img1.setScaledContents(True)
             self.img1.setPixmap(self.pixmap1)
             self.imbg =  Image.open(self.file_pathex1+'\\'+self.ranpic1)
+            self.maxim1x = self.imbg.size[0]
+            self.maxim1y = self.imbg.size[1]
+            self.ranpo1x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo1y = random.randrange(self.minim1y,self.maxim1y)
 
     def change2(self):
         if len(self.listpic2)>0:
@@ -50,6 +59,7 @@ class ranptaste(Ui_MainWindow):
             self.img3.setScaledContents(True)
             self.img3.setPixmap(self.pixmap3)
             self.imcrop2 =  Image.open(self.file_pathex2+'\\'+self.ranpic3)
+
     def change3(self):
         if len(self.listpic3)>0:
             self.ranpic4=random.choice(self.listpic3)
@@ -89,6 +99,11 @@ class ranptaste(Ui_MainWindow):
             self.img1.setPixmap(self.pixmap1)
             # print(self.ranpic1)
             self.imbg =  Image.open(self.file_pathex1+'\\'+self.ranpic1)
+            self.maxim1x = self.imbg.size[0]
+            self.maxim1y = self.imbg.size[1]
+            self.ranpo1x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo1y = random.randrange(self.minim1y,self.maxim1y)
+            
     
     def browsclickex2(self):
         dialog2=QFileDialog()
@@ -102,12 +117,16 @@ class ranptaste(Ui_MainWindow):
             self.img2.setScaledContents(True)
             self.img2.setPixmap(self.pixmap2)
             self.imcrop1 =  Image.open(self.file_pathex2+'\\'+self.ranpic2)
+            self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
+
 
             self.ranpic3=random.choice(self.listpic2)
             self.pixmap3=QPixmap(self.file_pathex2+'\\'+self.ranpic3)
             self.img3.setScaledContents(True)
             self.img3.setPixmap(self.pixmap3)
             self.imcrop2 =  Image.open(self.file_pathex2+'\\'+self.ranpic3)
+            self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
+
 
     def browsclickex3(self):
         dialog3=QFileDialog()
@@ -121,24 +140,28 @@ class ranptaste(Ui_MainWindow):
             self.img4.setScaledContents(True)
             self.img4.setPixmap(self.pixmap4)
             self.imweed1 =  Image.open(self.file_pathex3+'\\'+self.ranpic4)
+            self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
 
             self.ranpic5=random.choice(self.listpic3)
             self.pixmap5=QPixmap(self.file_pathex3+'\\'+self.ranpic5)
             self.img5.setScaledContents(True)
             self.img5.setPixmap(self.pixmap5)
             self.imweed2 =  Image.open(self.file_pathex3+'\\'+self.ranpic5)
+            self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
 
             self.ranpic6=random.choice(self.listpic3)
             self.pixmap6=QPixmap(self.file_pathex3+'\\'+self.ranpic6)
             self.img6.setScaledContents(True)
             self.img6.setPixmap(self.pixmap6)
             self.imweed3 =  Image.open(self.file_pathex3+'\\'+self.ranpic6)
+            self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
 
             self.ranpic7=random.choice(self.listpic3)
             self.pixmap7=QPixmap(self.file_pathex3+'\\'+self.ranpic7)
             self.img7.setScaledContents(True)
             self.img7.setPixmap(self.pixmap7)
             self.imweed4 =  Image.open(self.file_pathex3+'\\'+self.ranpic7)
+            self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
 
     def browsclickex4(self):
         dialog4=QFileDialog()
