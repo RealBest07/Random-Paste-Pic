@@ -14,37 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_2">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_3">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="browsebt1">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -57,7 +27,7 @@
      <string>Browse...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="browsebt2">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -70,7 +40,7 @@
      <string>Browse...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="browsebt3">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -83,7 +53,7 @@
      <string>Browse...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="changebt1">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -94,36 +64,6 @@
     </property>
     <property name="text">
      <string>Change</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_4">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>250</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_6">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_8">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>250</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -183,17 +123,7 @@
      <string>Weed</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser_9">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>250</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="changebt2">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -206,7 +136,7 @@
      <string>Change</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="changebt3">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -217,16 +147,6 @@
     </property>
     <property name="text">
      <string>Change</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_10">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>550</y>
-      <width>451</width>
-      <height>301</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -248,7 +168,7 @@
      <string>Result</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="randombt1">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -266,7 +186,7 @@
      <string>Random</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="savebt1">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -284,7 +204,7 @@
      <string>Save</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_9">
+   <widget class="QPushButton" name="browsebt4">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -302,7 +222,7 @@
      <string>Browse...</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="browse1">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -312,7 +232,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="browse2">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -322,7 +242,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="browse3">
     <property name="geometry">
      <rect>
       <x>640</x>
@@ -332,7 +252,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="browse4">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -340,6 +260,173 @@
       <width>461</width>
       <height>31</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>451</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>250</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>250</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>50</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>50</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>250</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 203, 160);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>20</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>50</y>
+      <width>20</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>510</y>
+      <width>1071</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
