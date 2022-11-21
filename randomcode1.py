@@ -22,6 +22,7 @@ class ranptaste(Ui_MainWindow):
         self.minim1y = 0
         self.minim2x = 0
         self.minim2y = 0
+        self.i=0
 
     def gcn(self):
         self.browsebt1.clicked.connect(self.browsclickex1)
@@ -31,6 +32,41 @@ class ranptaste(Ui_MainWindow):
         self.changebt1.clicked.connect(self.change1)
         self.changebt2.clicked.connect(self.change2)
         self.changebt3.clicked.connect(self.change3)
+        self.randombt1.clicked.connect(self.generatefnc)
+        self.savebt1.clicked.connect(self.saveim)
+
+    def saveim(self):
+        if self.i >= 0:   
+            self.imbg.save(self.file_pathex4+'\\'+'image'+str(self.i)+'.jpg')
+        self.i = self.i + 1   
+        
+        
+    def generatefnc(self):
+        self.imbgori = Image.open(self.file_pathex1+'\\'+self.ranpic1)
+        self.imbg =  self.imbgori.copy()
+        self.ranpo1x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo1y = random.randrange(self.minim1y,self.maxim1y)
+        self.ranpo2x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo2y = random.randrange(self.minim1y,self.maxim1y)
+        self.ranpo3x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo3y = random.randrange(self.minim1y,self.maxim1y)
+        self.ranpo4x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo4y = random.randrange(self.minim1y,self.maxim1y)
+        self.ranpo5x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo5y = random.randrange(self.minim1y,self.maxim1y)
+        self.ranpo6x = random.randrange(self.minim1x,self.maxim1x)
+        self.ranpo6y = random.randrange(self.minim1y,self.maxim1y)
+        self.imbg.paste(self.imcrop1,(self.ranpo1x, self.ranpo1y), self.mask_crop1)
+        self.imbg.paste(self.imcrop2,(self.ranpo2x, self.ranpo2y), self.mask_crop2)   
+        self.imbg.paste(self.imweed1,(self.ranpo3x, self.ranpo3y), self.mask_weed1)
+        self.imbg.paste(self.imweed2,(self.ranpo4x, self.ranpo4y), self.mask_weed2)   
+        self.imbg.paste(self.imweed3,(self.ranpo5x, self.ranpo5y), self.mask_weed3)
+        self.imbg.paste(self.imweed4,(self.ranpo6x, self.ranpo6y), self.mask_weed4) 
+        self.imbg.save(self.file_pathex4+'\\'+'image'+'.jpg')
+        self.pixmap8=QPixmap(self.file_pathex4+'\\'+'image'+'.jpg')
+        self.img8.setScaledContents(True)
+        self.img8.setPixmap(self.pixmap8)
+        os.remove(self.file_pathex4+'\\'+'image'+'.jpg')
         
 
 
@@ -40,11 +76,22 @@ class ranptaste(Ui_MainWindow):
             self.pixmap1=QPixmap(self.file_pathex1+'\\'+self.ranpic1)
             self.img1.setScaledContents(True)
             self.img1.setPixmap(self.pixmap1)
-            self.imbg =  Image.open(self.file_pathex1+'\\'+self.ranpic1)
+            self.imbgori = Image.open(self.file_pathex1+'\\'+self.ranpic1)
+            self.imbg =  self.imbgori.copy()
             self.maxim1x = self.imbg.size[0]
             self.maxim1y = self.imbg.size[1]
             self.ranpo1x = random.randrange(self.minim1x,self.maxim1x)
             self.ranpo1y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo2x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo2y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo3x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo3y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo4x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo4y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo5x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo5y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo6x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo6y = random.randrange(self.minim1y,self.maxim1y)
 
     def change2(self):
         if len(self.listpic2)>0:
@@ -53,12 +100,17 @@ class ranptaste(Ui_MainWindow):
             self.img2.setScaledContents(True)
             self.img2.setPixmap(self.pixmap2)
             self.imcrop1 =  Image.open(self.file_pathex2+'\\'+self.ranpic2)
+            self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
+            
+
 
             self.ranpic3=random.choice(self.listpic2)
             self.pixmap3=QPixmap(self.file_pathex2+'\\'+self.ranpic3)
             self.img3.setScaledContents(True)
             self.img3.setPixmap(self.pixmap3)
             self.imcrop2 =  Image.open(self.file_pathex2+'\\'+self.ranpic3)
+            self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
+            
 
     def change3(self):
         if len(self.listpic3)>0:
@@ -67,24 +119,28 @@ class ranptaste(Ui_MainWindow):
             self.img4.setScaledContents(True)
             self.img4.setPixmap(self.pixmap4)
             self.imweed1 =  Image.open(self.file_pathex3+'\\'+self.ranpic4)
+            self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
 
             self.ranpic5=random.choice(self.listpic3)
             self.pixmap5=QPixmap(self.file_pathex3+'\\'+self.ranpic5)
             self.img5.setScaledContents(True)
             self.img5.setPixmap(self.pixmap5)
             self.imweed2 =  Image.open(self.file_pathex3+'\\'+self.ranpic5)
+            self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
 
             self.ranpic6=random.choice(self.listpic3)
             self.pixmap6=QPixmap(self.file_pathex3+'\\'+self.ranpic6)
             self.img6.setScaledContents(True)
             self.img6.setPixmap(self.pixmap6)
             self.imweed3 =  Image.open(self.file_pathex3+'\\'+self.ranpic6)
+            self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
 
             self.ranpic7=random.choice(self.listpic3)
             self.pixmap7=QPixmap(self.file_pathex3+'\\'+self.ranpic7)
             self.img7.setScaledContents(True)
             self.img7.setPixmap(self.pixmap7)
             self.imweed4 =  Image.open(self.file_pathex3+'\\'+self.ranpic7)
+            self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
         
     def browsclickex1(self):
         dialog=QFileDialog()
@@ -103,6 +159,16 @@ class ranptaste(Ui_MainWindow):
             self.maxim1y = self.imbg.size[1]
             self.ranpo1x = random.randrange(self.minim1x,self.maxim1x)
             self.ranpo1y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo2x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo2y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo3x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo3y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo4x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo4y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo5x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo5y = random.randrange(self.minim1y,self.maxim1y)
+            self.ranpo6x = random.randrange(self.minim1x,self.maxim1x)
+            self.ranpo6y = random.randrange(self.minim1y,self.maxim1y)
             
     
     def browsclickex2(self):
@@ -118,7 +184,6 @@ class ranptaste(Ui_MainWindow):
             self.img2.setPixmap(self.pixmap2)
             self.imcrop1 =  Image.open(self.file_pathex2+'\\'+self.ranpic2)
             self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
-
 
             self.ranpic3=random.choice(self.listpic2)
             self.pixmap3=QPixmap(self.file_pathex2+'\\'+self.ranpic3)
