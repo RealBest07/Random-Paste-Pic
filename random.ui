@@ -172,7 +172,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>560</y>
+      <y>600</y>
       <width>591</width>
       <height>111</height>
      </rect>
@@ -208,7 +208,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>680</y>
+      <y>560</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -256,7 +256,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>680</y>
+      <y>560</y>
       <width>461</width>
       <height>31</height>
      </rect>
@@ -272,7 +272,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -288,7 +288,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -304,7 +304,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -320,7 +320,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -336,7 +336,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -352,7 +352,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -368,7 +368,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
@@ -384,7 +384,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 203, 160);</string>
+     <string notr="true">background-color: rgb(170, 255, 127);</string>
     </property>
     <property name="text">
      <string/>
