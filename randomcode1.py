@@ -56,12 +56,12 @@ class ranptaste(Ui_MainWindow):
         self.ranpo5y = random.randrange(self.minim1y,self.maxim1y)
         self.ranpo6x = random.randrange(self.minim1x,self.maxim1x)
         self.ranpo6y = random.randrange(self.minim1y,self.maxim1y)
-        self.imbg.paste(self.imcrop1,(self.ranpo1x, self.ranpo1y), self.mask_crop1)
-        self.imbg.paste(self.imcrop2,(self.ranpo2x, self.ranpo2y), self.mask_crop2)   
-        self.imbg.paste(self.imweed1,(self.ranpo3x, self.ranpo3y), self.mask_weed1)
-        self.imbg.paste(self.imweed2,(self.ranpo4x, self.ranpo4y), self.mask_weed2)   
-        self.imbg.paste(self.imweed3,(self.ranpo5x, self.ranpo5y), self.mask_weed3)
-        self.imbg.paste(self.imweed4,(self.ranpo6x, self.ranpo6y), self.mask_weed4) 
+        self.imbg.paste(self.imcrop1,(self.ranpo1x, self.ranpo1y), self.imcrop1)
+        self.imbg.paste(self.imcrop2,(self.ranpo2x, self.ranpo2y), self.imcrop2)   
+        self.imbg.paste(self.imweed1,(self.ranpo3x, self.ranpo3y), self.imweed1)
+        self.imbg.paste(self.imweed2,(self.ranpo4x, self.ranpo4y), self.imweed2)   
+        self.imbg.paste(self.imweed3,(self.ranpo5x, self.ranpo5y), self.imweed3)
+        self.imbg.paste(self.imweed4,(self.ranpo6x, self.ranpo6y), self.imweed4) 
         self.imbg.save(self.file_pathex4+'\\'+'image'+'.jpg')
         self.pixmap8=QPixmap(self.file_pathex4+'\\'+'image'+'.jpg')
         self.img8.setScaledContents(True)
@@ -100,7 +100,7 @@ class ranptaste(Ui_MainWindow):
             self.img2.setScaledContents(True)
             self.img2.setPixmap(self.pixmap2)
             self.imcrop1 =  Image.open(self.file_pathex2+'\\'+self.ranpic2)
-            self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
+            # self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
             
 
 
@@ -109,7 +109,7 @@ class ranptaste(Ui_MainWindow):
             self.img3.setScaledContents(True)
             self.img3.setPixmap(self.pixmap3)
             self.imcrop2 =  Image.open(self.file_pathex2+'\\'+self.ranpic3)
-            self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
+            # self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
             
 
     def change3(self):
@@ -119,28 +119,28 @@ class ranptaste(Ui_MainWindow):
             self.img4.setScaledContents(True)
             self.img4.setPixmap(self.pixmap4)
             self.imweed1 =  Image.open(self.file_pathex3+'\\'+self.ranpic4)
-            self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
+            # self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
 
             self.ranpic5=random.choice(self.listpic3)
             self.pixmap5=QPixmap(self.file_pathex3+'\\'+self.ranpic5)
             self.img5.setScaledContents(True)
             self.img5.setPixmap(self.pixmap5)
             self.imweed2 =  Image.open(self.file_pathex3+'\\'+self.ranpic5)
-            self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
+            # self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
 
             self.ranpic6=random.choice(self.listpic3)
             self.pixmap6=QPixmap(self.file_pathex3+'\\'+self.ranpic6)
             self.img6.setScaledContents(True)
             self.img6.setPixmap(self.pixmap6)
             self.imweed3 =  Image.open(self.file_pathex3+'\\'+self.ranpic6)
-            self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
+            # self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
 
             self.ranpic7=random.choice(self.listpic3)
             self.pixmap7=QPixmap(self.file_pathex3+'\\'+self.ranpic7)
             self.img7.setScaledContents(True)
             self.img7.setPixmap(self.pixmap7)
             self.imweed4 =  Image.open(self.file_pathex3+'\\'+self.ranpic7)
-            self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
+            # self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
         
     def browsclickex1(self):
         dialog=QFileDialog()
@@ -183,14 +183,14 @@ class ranptaste(Ui_MainWindow):
             self.img2.setScaledContents(True)
             self.img2.setPixmap(self.pixmap2)
             self.imcrop1 =  Image.open(self.file_pathex2+'\\'+self.ranpic2)
-            self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
+            # self.mask_crop1 = Image.open(self.file_pathex2+'\\'+self.ranpic2).convert('L')
 
             self.ranpic3=random.choice(self.listpic2)
             self.pixmap3=QPixmap(self.file_pathex2+'\\'+self.ranpic3)
             self.img3.setScaledContents(True)
             self.img3.setPixmap(self.pixmap3)
             self.imcrop2 =  Image.open(self.file_pathex2+'\\'+self.ranpic3)
-            self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
+            # self.mask_crop2 = Image.open(self.file_pathex2+'\\'+self.ranpic3).convert('L')
 
 
     def browsclickex3(self):
@@ -205,28 +205,28 @@ class ranptaste(Ui_MainWindow):
             self.img4.setScaledContents(True)
             self.img4.setPixmap(self.pixmap4)
             self.imweed1 =  Image.open(self.file_pathex3+'\\'+self.ranpic4)
-            self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
+            # self.mask_weed1 = Image.open(self.file_pathex3+'\\'+self.ranpic4).convert('L')
 
             self.ranpic5=random.choice(self.listpic3)
             self.pixmap5=QPixmap(self.file_pathex3+'\\'+self.ranpic5)
             self.img5.setScaledContents(True)
             self.img5.setPixmap(self.pixmap5)
             self.imweed2 =  Image.open(self.file_pathex3+'\\'+self.ranpic5)
-            self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
+            # self.mask_weed2 = Image.open(self.file_pathex3+'\\'+self.ranpic5).convert('L')
 
             self.ranpic6=random.choice(self.listpic3)
             self.pixmap6=QPixmap(self.file_pathex3+'\\'+self.ranpic6)
             self.img6.setScaledContents(True)
             self.img6.setPixmap(self.pixmap6)
             self.imweed3 =  Image.open(self.file_pathex3+'\\'+self.ranpic6)
-            self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
+            # self.mask_weed3 = Image.open(self.file_pathex3+'\\'+self.ranpic6).convert('L')
 
             self.ranpic7=random.choice(self.listpic3)
             self.pixmap7=QPixmap(self.file_pathex3+'\\'+self.ranpic7)
             self.img7.setScaledContents(True)
             self.img7.setPixmap(self.pixmap7)
             self.imweed4 =  Image.open(self.file_pathex3+'\\'+self.ranpic7)
-            self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
+            # self.mask_weed4 = Image.open(self.file_pathex3+'\\'+self.ranpic7).convert('L')
 
     def browsclickex4(self):
         dialog4=QFileDialog()

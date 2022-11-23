@@ -13,7 +13,7 @@ maxim2x = im2.size[0]
 maxim2y = im2.size[1]
 ranpo1x = random.randrange(minim1x,maxim1x)
 ranpo1y = random.randrange(minim1y,maxim1y)
-mask_im = Image.open('D:\Project\img\\raw\\for dicut\\peanut\\4.png').convert('L')
+# mask_im = Image.open('D:\Project\img\\raw\\for dicut\\peanut\\4.png').convert('L')
 print(im2.size[0])
-im1.paste(im2,(ranpo1x, ranpo1y), mask_im) #im2 paste im im1
+im1.paste(im2,(ranpo1x, ranpo1y), im2) #im2 paste im im1
 im1.save('D:/Project/img/rocket_pillow_paste.jpg', quality=100)
